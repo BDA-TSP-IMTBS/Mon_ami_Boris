@@ -1,0 +1,59 @@
+{
+    "reactionToRole" : [
+        {            
+            "messageName": "Charte du Discord",
+            "messageId": "1142084103366258819",
+            "channelId": "1140272138763386990",
+            "emojiToRole": [
+                { "emoji": "✅", "role": "Public" }
+            ],
+            "generalRole": ""
+        },
+        {
+            "messageName": "Rôle du BDA",
+            "messageId": "1142085746887491634",
+            "channelId": "1140272819813482636",
+            "emojiToRole": [
+                { "emoji": "🪩", "role": "Soirées" },
+                { "emoji": "🧑‍🎤", "role": "Scènes ouvertes" },
+                { "emoji": "🪅", "role": "Festiv'ART" },
+                { "emoji": "🖼️", "role": "Sorties RA" },
+                { "emoji": "🖌️", "role": "Lumin&Sens" },
+                { "emoji": "❄️", "role": "Marché de Noël" },
+                { "emoji": "🤝", "role": "Intronisation" }
+            ],
+            "generalRole": "●▬▬●Évènements du BDA●▬▬●"
+        },
+        {
+            "messageName": "Rôle des clubs",
+            "messageId": "1142092373061541968",
+            "channelId": "1140272819813482636",
+            "emojiToRole": [
+                { "emoji": "AnimINT", "role": "Anim'INT" },
+                { "emoji": "Aparte", "role": "Aparté" },
+                { "emoji": "BandMichel", "role": "Band'à Michel" },
+    
+                { "emoji": "BellyDance", "role": "Belly Dance" },
+                { "emoji": "CineClub:", "role": "Ciné Club" },
+                { "emoji": "ClubJeux", "role": "Club Jeux" },
+    
+                { "emoji": "ClubZik", "role": "Club Zik" },
+                { "emoji": "Cookit", "role": "Cook'it" },
+                { "emoji": "Declic", "role": "Déclic" },
+    
+                { "emoji": "EmotyS", "role": "Emoty:s" },
+                { "emoji": "INTerlude", "role": "INTerlude" },
+                { "emoji": "KCrew", "role": "K-Crew" },
+    
+                { "emoji": "LeRig", "role": "Le RIG" },
+                { "emoji": "MoovINT", "role": "Moov'INT" },
+                { "emoji": "PaintIT", "role": "Paint'IT" },
+    
+                { "emoji": "SingINT", "role": "Sing'INT" },
+                { "emoji": "Spades", "role": "Spades" },
+                { "emoji": "TellTheTale", "role": "Tell The Tale" }
+            ],
+            "generalRole": "●▬▬●Évènements des Clubs●▬▬●"
+        }
+    ]
+}
