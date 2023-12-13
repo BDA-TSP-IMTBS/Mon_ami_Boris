@@ -64,9 +64,7 @@ Dans la racine du projet, ajouter un fichier "config.json" de la forme:
 
 ```json
 {
-  {
   "token": "your-token"
-  }
 }
 ```
 Le token du bot étant comme son mot de passe, il ne peut pas être mis sur le GitHub
