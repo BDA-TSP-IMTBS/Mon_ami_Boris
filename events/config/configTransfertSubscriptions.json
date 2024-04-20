@@ -1,0 +1,83 @@
+{
+    "receptionChannel": 1231192771747119136,
+    "serverBots": [
+        {
+            "id": 1231198429103919205,
+            "name": "Anim'INT",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Anim'INT.png",
+            "roleToPing": "<@&1134134908185497640>"
+        },
+        {
+            "id": 1231196723108380713,
+            "name": "Aparté",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Aparté.png",
+            "roleToPing": "<@&1134134956382232596>"
+        },
+        {
+            "id": 1231237413331013675,
+            "name": "Club Jeux",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Club%20Jeux.png",
+            "roleToPing": "<@&1134135141602709526>"
+        },
+        {
+            "id": 1231220403867877418,
+            "name": "Cook'IT",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Cook'it.png",
+            "roleToPing": "<@&1134135256052666369>"
+        },
+        {
+            "id": 0,
+            "name": "Déclic",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Déclic.png",
+            "roleToPing": "<@&1134135281193336924>"
+        },
+        {
+            "id": 0,
+            "name": "Le RIG",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Le%20RIG.png",
+            "roleToPing": "<@&1134135571606937601>"
+        },
+        {
+            "id": 0,
+            "name": "Paint'IT",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Paint'it.png",
+            "roleToPing": "<@&1134135777765359656>"
+        },
+        {
+            "id": 0,
+            "name": "Sing'INT",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Sing'INT.png",
+            "roleToPing": "<@&1134136135120060538>"
+        },
+        {
+            "id": 0,
+            "name": "Spades",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Spades.png",
+            "roleToPing": "<@&1134136204091203615>"
+        },
+        {
+            "id": 0,
+            "name": "Tell the Tale",
+            "avatar": "https://raw.githubusercontent.com/BDA-TSP-IMTBS/Mon_ami_Boris/master/resources/serverAvatar/Tell%20the%20Tale.png",
+            "roleToPing": "<@&1134136230259470467>"
+        }
+    ],
+    "rolesEquivalents": [
+        { 
+            "serverRole": "<@&1134131858062458951>",
+            "equivalences": ["1A", "Ecuyer·e (1A)", "Segment", "Petit pain (1A)", "Petit moineau", "street magicien (1A)", "Thé Vert", "El Pueblo"]
+        },
+        { 
+            "serverRole": "<@&1134131846939164752>",
+            "equivalences": ["2A", "Noble (2A)", "Carré", "Croissant (2A)", "Rossignol en envol", "Close-up man (2A)", "Thé Oolong", "Marx"]
+        },
+        { 
+            "serverRole": "<@&1134131829411164392>",
+            "equivalences": ["3A", "Esprit (3A)", "Cube", "Pain rassis (3A+)", "3A+", "Hibou accompli", "magicien de scène (3A)", "Thé Noir"]
+        },
+        {
+            "serverRole": "<@&1134131771705921619>",
+            "equivalences": ["Vieux", "Relique (4A+)", "Tesseract", "grand magicien (4A+)"]
+        }
+    ]
+}

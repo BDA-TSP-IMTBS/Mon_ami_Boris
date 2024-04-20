@@ -9,7 +9,7 @@ const { Events } = require('discord.js');
 //                  - emojiToRole : une liste de json qui informe de comment se comporter quand telle ou telle emoji est donné
 
 // Les éléments qui composent emojiToRole sont des jsons composés de 2 attributs (emoji, role), qui indiquent que si telle emoji est donnée, alors tel rôle doit être attribué
-const { reactionToRole } = require('./configReactionToRole.json');
+const { reactionToRole } = require('./config/configReactionToRole.json');
 
 
 module.exports = {
@@ -46,6 +46,15 @@ module.exports = {
                             const roleToAdd = guild.roles.cache.find(role => role.name === emojiToReact.role);
 
                             if (roleToAdd) {
+                                // On ajoute le rôle demandé à l'utilisateur
+                                try {
+                                    await member.roles.add(roleToAdd);
+                                    console.log(`Le rôle ${roleToAdd.name} a été attribué à ${user.username}.`);
+                                    await member.fetch();
+                                    } catch (error) {
+                                    console.error("Erreur lors de l'attribution du rôle :", error);
+                                }
+
                                 // Si il existe un rôle général et si l'utilisateur ne l'a pas déjà
                                 if (messsageToReact.generalRole !== "" && !(member.roles.cache.some(role => role.name === messsageToReact.generalRole))) {
                                     const generalRoleToAdd = guild.roles.cache.find(role => role.name === messsageToReact.generalRole);
@@ -54,18 +63,11 @@ module.exports = {
                                             // On lui rajoute
                                             await member.roles.add(generalRoleToAdd);
                                             console.log(`Le rôle ${generalRoleToAdd.name} a été attribué à ${user.username}.`);
+                                            await member.fetch();
                                             } catch (error) {
-                                            console.error('Erreur lors de l\'attribution du rôle :', error);
+                                            console.error("Erreur lors de l'attribution du rôle :", error);
                                         }
                                     }
-                                }
-
-                                // On ajoute le rôle demandé à l'utilisateur
-                                try {
-                                    await member.roles.add(roleToAdd);
-                                    console.log(`Le rôle ${roleToAdd.name} a été attribué à ${user.username}.`);
-                                    } catch (error) {
-                                    console.error('Erreur lors de l\'attribution du rôle :', error);
                                 }
                             }
                             else {console.log(`Rôle ${messsageToReact.generalRole} non trouvé`)}
