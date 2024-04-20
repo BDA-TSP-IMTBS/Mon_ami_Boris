@@ -195,3 +195,12 @@ Son fonctionement est parametré par le fichier [configTransfertSubscriptions.js
   ```
 - `serverRole`: Id du rôle équivalent sur le serveur;
 - `equivalences`: Liste des noms des rôles des serveurs communautaires qui équivalent au rôle du serveur. L'exemple montre les équivalent du rôle `première année` sur les différents serveurs des clubs du BDA.
+
+#### Détails à noter:
+Il est possible pour les seurveurs communautaires d'ajouter des images ou autres documents à leur messages publiés. Il est aussi possible d'éditer ses messages ou de les supprimer.
+
+<b>Mais</b> il n'est pas possible d'éditer des messages qui contiennent une pièce jointe.
+
+Les messages ayant un contenu textuel vide ne provoqueront pas de notification.
+
+Il est donc conseillé de séparer ses messages en 2, une partie contenant le texte, que l'on pourra éditer par la suite, et l'autre les images.
