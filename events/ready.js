@@ -1,6 +1,6 @@
 const { Events } = require('discord.js');
 
-const { reactionToRole } = require('./configReactionToRole.json');
+const { reactionToRole } = require('./config/configReactionToRole.json');
 
 module.exports = {
 	name: Events.ClientReady,
