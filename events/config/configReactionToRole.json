@@ -54,6 +54,18 @@
                 { "emoji": "TellTheTale", "role": "Tell The Tale" }
             ],
             "generalRole": "●▬▬●Évènements des Clubs●▬▬●"
+        },
+        {
+            "messageName": "Choix année",
+            "messageId": "1236983023074021407",
+            "channelId": "1140272819813482636",
+            "emojiToRole": [
+                { "emoji": "🟩", "role": "1A" },   
+                { "emoji": "🟦", "role": "2A" },
+                { "emoji": "🟪", "role": "3A" },
+                { "emoji": "🟥", "role": "4A et +" }
+            ],
+            "generalRole": ""
         }
     ]
 }
