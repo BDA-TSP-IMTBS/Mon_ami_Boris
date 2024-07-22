@@ -1,12 +1,21 @@
 # Mon Ami Boris
 
 Mon Ami Boris est un bot Discord permettant diverses choses pour la gestion d'un serveur Discord :
+
 - L'attribution de rôles par les membres via des réactions à certains messages;
+
 - Le rajout des notifications sur le système d'abonnement aux serveurs communautaires.
 
- Il a été créée en 2023 par le pôle web du BDA du campus TSP/IMTBS.
+ Il a été créée en 2023 par le pôle web du BDA du campus TSP/IMT-BS.
 
-<br />
+- [Installation](#installation)
+  - [Déploiement dans une VM](#déploiement-dans-une-vm)
+  - [Relancer le bot](#relancer-le-bot)
+  - [Ajouter le fichier config](#ajouter-le-fichier-config)
+
+- [Utiliser le bot](#utiliser-le-bot)
+  - [Don de rôles](#utilisation-1--donner-des-rôles-via-des-réactions-aux-messages)
+  - [Abonnement](#utilisation-2--abonnement-aux-serveurs-communautaires)
 
 ## Installation
 
@@ -14,7 +23,7 @@ Pour déployer le bot, vous avez pouvez le faire dans une machine virtuelle (VM)
 
 ### Déploiement dans une VM
 
-Il vous faut installer `Node Vercion Manager (NVM)` dans votre VM. NVM est un outils qui permet de gérer plusieurs versions de Node.js. Vous pouvez utiliser les commandes suivantes pour le faire ou suivre d'autres méthodes.
+Il vous faut installer `Node Version Manager (NVM)` dans votre VM. NVM est un outils qui permet de gérer plusieurs versions de Node.js. Vous pouvez utiliser les commandes suivantes pour le faire ou suivre d'autres méthodes.
 
 ```bash
  sudo apt install curl
@@ -49,30 +58,33 @@ Installer les bibliothèques :
 
 Ensuite, clonez le repository où vous le souhaitez dans la machine.
 
-<br />
+&nbsp;
 
 ### Relancer le bot
 
-Pour relancer le bot lorsque la VM est redémarée, il existe plusieurs méthodes. Ici, je vais détailler celle utilisant le gestionnaire de processus pm2.
+Pour relancer le bot lorsque la VM est redémarrée, il existe plusieurs méthodes. Ici, je vais détailler celle utilisant le gestionnaire de processus pm2.
 
 D'abord, installer pm2 :
+
 ```bash
  npm install pm2@latest -g
 ```
 
 Pour lancer l'application, utilisez :
+
 ```bash
  pm2 start ./Mon_ami_Boris/index.js --name "Mon ami Boris" # --name "Mon ami Boris" est optionnel, mais est plus pratique pour suivre le processus
 ```
 
 Puis pour mettre en place le redémarrage du bot:
+
 ```bash
  pm2 startup
  # Il est demandé de renter une commande donnée et après :
  pm2 save
 ```
 
-<br />
+&nbsp;
 
 ### Ajouter le fichier config
 
@@ -84,15 +96,16 @@ Dans la racine du projet, ajouter un fichier "config.json" de la forme:
     "webhookURL": "your-webhook-url"
 }
 ```
+
 Le token du bot étant comme son mot de passe, il ne peut pas être mis sur le GitHub. De même pour l'url du webhook, si l'on ne veut pas que quelqu'un se mette à envoyer des messages dans le channel du webhook.
 
-<br /><br />
+&nbsp;
 
-# Utiliser le bot
+## Utiliser le bot
 
 ### Utilisation 1 : Donner des rôles via des réactions aux messages
 
-Les associations rôles/messages/réactions sont à controler dans le fichier [configReactionToRole.json](./events/config/configReactionToRole.json)
+Les associations rôles/messages/réactions sont à contrôler dans le fichier [configReactionToRole.json](./events/config/configReactionToRole.json)
 
 ```json
 {
@@ -128,23 +141,25 @@ Les associations rôles/messages/réactions sont à controler dans le fichier [c
 - `messageName` : Nom du message
 - `messageId` : id du message dans discord
 - `channelId` : id du channel dans lequel est le message
-- `emojiToRole` : tableau faisant le lien entre la réation et le rôle à ajouter/retirer
+- `emojiToRole` : tableau faisant le lien entre la réaction et le rôle à ajouter/retirer
+
   ```json
       ...
       { "emoji": "🪩", "role": "Soirées" },
       ...
   ```
-- `generalRole`: Catégorie de rôle auquels appartiennent les rôles à ajouter sur le message. Il s'agit juste d'un rôle plus long n'apportant aucun privilège, mais permettant une meilleur lecture des rôles d'une personne
 
-<br />
+- `generalRole`: Catégorie de rôle auxquels appartiennent les rôles à ajouter sur le message. Il s'agit juste d'un rôle plus long n'apportant aucun privilège, mais permettant une meilleur lecture des rôles d'une personne
+
+&nbsp;
 
 ### Utilisation 2 : Abonnement aux serveurs communautaires
 
-Le bot permet un abonnement aux serveurs commnunautaires, en retransmettant les pings fait sur ces serveurs et qui ne sont pas retransmis normalement.
+Le bot permet un abonnement aux serveurs communautaires, en retransmettant les pings fait sur ces serveurs et qui ne sont pas retransmis normalement.
 
-Tout d'abord, il faut metre dans le fichier `config.json` l'url du webhook qui doit retransmettre les messages.
+Tout d'abord, il faut mettre dans le fichier `config.json` l'url du webhook qui doit retransmettre les messages.
 
-Son fonctionement est parametré par le fichier [configTransfertSubscriptions.json](./events/config/configTransfertSubscriptions.json) :
+Son fonctionnement est paramétré par le fichier [configTransfertSubscriptions.json](./events/config/configTransfertSubscriptions.json) :
 
 ```json
 {
@@ -167,7 +182,8 @@ Son fonctionement est parametré par le fichier [configTransfertSubscriptions.js
 ```
 
 - `receptionChannel` : Id du channel abonné aux serveurs communautaire;
-- `serverBots` : Liste des serveurs communautaires auquels les serveur est abonné;
+- `serverBots` : Liste des serveurs communautaires auxquels les serveur est abonné;
+
   ```json
       ...
       {
@@ -178,13 +194,15 @@ Son fonctionement est parametré par le fichier [configTransfertSubscriptions.js
       }
       ...
   ```
+
 - `id`: Id du bot qui retransmet les messages du serveur communautaire;
 - `name`: Nom à donner au webhook pour retransmettre le message;
 - `avatar`: Avatar à donner au webhook pour retransmettre le message. Les images sont stockées dans le dossier [resources](./resources/). ATTENTION : il faut bien mettre le lien  INTERNET vers l'image;
-- `roleToPing`: Id du rôle à ping quand un message provient de ce serveur communautraire. Pour le récupérer, faites `\@role` sur votre serveur;
+- `roleToPing`: Id du rôle à ping quand un message provient de ce serveur communautaire. Pour le récupérer, faites `\@role` sur votre serveur;
 
 
 - `rolesEquivalents`: Liste des rôles pouvant être ping dans les messages.
+
   ```json
       ...
       { 
@@ -193,13 +211,17 @@ Son fonctionement est parametré par le fichier [configTransfertSubscriptions.js
       }
       ...
   ```
+
 - `serverRole`: Id du rôle équivalent sur le serveur;
 - `equivalences`: Liste des noms des rôles des serveurs communautaires qui équivalent au rôle du serveur. L'exemple montre les équivalent du rôle `première année` sur les différents serveurs des clubs du BDA.
 
-#### Détails à noter:
-Il est possible pour les seurveurs communautaires d'ajouter des images ou autres documents à leur messages publiés. Il est aussi possible d'éditer ses messages ou de les supprimer.
+&nbsp;
 
-<b>Mais</b> il n'est pas possible d'éditer des messages qui contiennent une pièce jointe.
+#### Détails à noter
+
+Il est possible pour les serveurs communautaires d'ajouter des images ou autres documents à leur messages publiés. Il est aussi possible d'éditer ses messages ou de les supprimer.
+
+**Mais** il n'est pas possible d'éditer des messages qui contiennent une pièce jointe.
 
 Les messages ayant un contenu textuel vide ne provoqueront pas de notification.
 
