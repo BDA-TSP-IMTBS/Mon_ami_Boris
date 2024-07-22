@@ -200,7 +200,6 @@ Son fonctionnement est paramétré par le fichier [configTransfertSubscriptions.
 - `avatar`: Avatar à donner au webhook pour retransmettre le message. Les images sont stockées dans le dossier [resources](./resources/). ATTENTION : il faut bien mettre le lien  INTERNET vers l'image;
 - `roleToPing`: Id du rôle à ping quand un message provient de ce serveur communautaire. Pour le récupérer, faites `\@role` sur votre serveur;
 
-
 - `rolesEquivalents`: Liste des rôles pouvant être ping dans les messages.
 
   ```json
